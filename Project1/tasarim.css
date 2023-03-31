@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+
 html,
 body {
     overflow-x: hidden;
@@ -183,25 +184,6 @@ input[type=checkbox] {
     margin-top: 3px;
 }
 
-input[type=checkbox]:checked~.sidebarIconToggle>.horizontal {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    opacity: 0;
-}
-
-input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-1 {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    transform: rotate(135deg);
-    margin-top: 8px;
-}
-
-input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    transform: rotate(-135deg);
-    margin-top: -9px;
-}
 
 .car {
     width: 100%;
@@ -257,15 +239,63 @@ input[type=checkbox]:checked~.sidebarIconToggle>.diagonal.part-2 {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
   
-  /* Add some padding inside the card container */
+  /* card container */
   .container {
     padding: 10px 16px;
   }
- 
+ /* photos of cards animation */
   .animasyon{
     opacity: 0.8;
     position: sticky;
   }
   .animasyon:hover{
     opacity: 1;
+  }
+  .about{
+    margin-left: 250px;
+    margin-top:100px;
+    margin-right: 150px;
+  }
+  .about img{
+    opacity: 0.9;
+    margin-left: 350px;
+  }
+  .about h1{
+    color: #00234b;
+    word-spacing: 5px;
+    text-align: center;
+  }
+.container_login{
+    
+    margin-top: 300px;
+    margin-left: 750px;
+    width: 250px;
+    height: 250px;
+}
+.container_login input{
+    width: 200px;
+}
+.login-form-field{
+width: 200px;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #00234b;
+    box-sizing: border-box;
+  }
+ .button {
+    background-color: #00234b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    border:none;
+    width: 100%;
+
+  }
+  button:hover {
+    opacity: 0.8;
   }

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Alperen Gayrimenkul</title>
-    <link rel="stylesheet" href="tasarim.css">
-</head>
-
+    <title>About Us</title>
+    <link rel="stylesheet" href="tasarim.css"> 
+    </head>
 <body>
     <div class="header">
         <p class="baslik">ALPEREN GAYRIMENKUL</p>
-        
     </div>
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
     <label for="openSidebarMenu" class="sidebarIconToggle">
@@ -22,11 +19,11 @@
         <ul class="sidebarMenuInner">
             <li> <span>WELCOME</span> TO ALPEREN GAYRIMENKUL</li>
             <li>
-           
+                <a href="index.html">
 
 
 
-                    <div class="row">     <a href="index.html">
+                    <div class="row">    <a href="index.html"></a>
                         <div class="column">
                             <i class="material-icons">home</i>
                         </div>
@@ -40,8 +37,8 @@
             </li>
 
             <li>
-            
-                <div class="row">    <a href="detail_page.html">
+                
+                <div class="row"><a href="detail_page.html">
                     <div class="column">
                         <i class="material-icons">directions_car</i>
                     </div>
@@ -55,9 +52,9 @@
 
 
             <li>
-                
+              
                     <!-- link değişecek -->
-                    <div class="row"><a href="about.html">
+                    <div class="row">  <a href="about.html">
                         <div class="column">
                             <i class="material-icons">
                                 <div class="icons">cloud</div>
@@ -70,18 +67,41 @@
                     </div>
                 </a>
             </li>
-            
-          
+            <li>
+             
+                <div class="row">   <a href="login.html">
+                    <div class="column">
+                        <i class="material-icons">person</i>
+                    </div>
+                    <div class="column">
+                        <p>LOGIN</p>
+                    </div>
+                </div>
+            </li>
 
         </ul>
-    </div>
 
-    <img  src="assets/homepage.jpg"   width="100%">
+        
+    </div>
+    <!-- <div class="container_login">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username">
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password">
+            
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" > Remember me
+        </label>
+      </div> -->
+      <form class = "container_login"  >
+        <input type="text"  class="login-form-field" value="" placeholder="Username">
+        <input type="password"  class="login-form-field" value="" placeholder="Password">
+        <input type="submit" class="button" value="Login">
+      </form>
+    
+    
+  
    
-    <div class = "text3">
-     <p>It's time to get your dream house, car, land!</p>
-    </div>
-    <i class="fas fa-bars" id="btn_open"></i>
-
-
 </html>

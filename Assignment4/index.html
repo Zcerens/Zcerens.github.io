@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tasarım Kodlama</title>
+  <link rel="stylesheet" type="text/css" href="tasarim.css">
+</head>
+
+<body>
+  <form id="sayfa" method="post" action="control.php">
+    <p>Name: <input type="text" id="name" ></p>
+    <p>Username: <input type="text" id="username"></p>
+    <p> Password: <input type="password" id="password"></p>
+    <p> Adress:<input type="text" id="adress"></p>
+    <p>Country:<input type="text" id="country"></p>
+    <p>ZIP Code:<input type="text" id="zipCode"></p>
+    <p>Email: <input type="email" id="email"></p>
+    <p>Sex:
+       <input type="radio"  name="sex" value="HTML">Female
+      
+       <input type="radio" name="sex" value="CSS">Male<br/><br/>
+       
+    </p>
+    <p>
+        Language:
+         <input type="checkbox" name="language[]" value="english" />English
+         <input type="checkbox" name="language[]" value="french"/>French
+         <input type="checkbox" name="language[]"  value="germany"/>Germany<br/><br/>  </p>
+         <p>   About: <textarea  name="my_text_area" rows="6" cols="30"></textarea><br/><br/><br/>  </p>
+   
+  
+   
+    <button id="ekle" onclick="">Submit</button>
+   
+  </form>
+
+
+</body>
+
+</html>

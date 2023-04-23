@@ -1,23 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Activity 6: JavaScript Game</title>
-    <style>
-      #game {
-        width: 500px;
-        height: 500px;
-        border: 1px solid black;
-        position: relative;
-      }
-      #game button {
-        position: absolute;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="game">
-      <button id="button" onclick="catchButton()">Click me</button>
-    </div>
-    <script src="game.js"></script>
-  </body>
+<head>
+	<title>Button Click Game</title>
+	<style>
+		/* #myButton {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100px;
+			height: 50px;
+			background-color: red;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			font-size: 20px;
+			cursor: pointer;
+		}
+    #gameArea {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  position: relative;
+} */
+#gameArea {
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+  position: relative;
+}
+
+#myButton {
+  background-color: red;
+			color: white;
+			border: none;
+			border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 125px;
+  left: 125px;
+}
+	</style>
+</head>
+<body>
+	<h1>Button Click Game</h1>
+	<p>Click the button as many times as you can!</p>
+	<div id="gameArea">
+    <button id="myButton" onclick="moveButton()"></button>
+  </div>
+	<p id="score">Score: 0</p>
+
+	<script src="game.js"></script>
+</body>
 </html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About Us</title>
+    <link rel="stylesheet" href="tasarim.css">
+    <link rel="stylesheet" href="progress.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+
+
+
+    <!-- jQuery plugins-1 -->
+    <script src="jquery/circle-progress.js"></script>
+    <!-- jQuery plugins-2 -->
+    <script src="jquery/jquery-countdown/jquery.countdown.js"></script>
+    <!-- jQuery plugins-3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+    <script src="jquery/jquery.imageloader.js"></script>
+    <!-- Add jQuery UI library -->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <p class="baslik">ALPEREN GAYRIMENKUL</p>
+        <div class="search">
+            <input type="text" placeholder=" Search.." name="search">
+        </div>
+    </div>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
+            <li><span>WELCOME</span> TO ALPEREN GAYRIMENKUL</li>
+            <li>
+                <div class="row">
+                    <a href="index.html">
+                        <div class="column">
+                            <i class="material-icons">home</i>
+                        </div>
+                        <div class="column">
+                            <p>HOME PAGE</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="row">
+                    <a href="detail_page.html">
+                        <div class="column">
+                            <i class="material-icons">directions_car</i>
+                        </div>
+                        <div class="column">
+                            <p>CAR LAND HOUSE</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="row">
+                    <a href="about.html">
+                        <div class="column">
+                            <i class="material-icons">
+                                <div class="icons">cloud</div>
+                            </i>
+                        </div>
+                        <div class="column">
+                            <p>About Us</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="row">
+                    <a href="login.html">
+                        <div class="column">
+                            <i class="material-icons">
+                                <div class="icons">person</div>
+                            </i>
+                        </div>
+                        <div class="column">
+                            <p>Login</p>
+                        </div>
+                    </a>
+                </div>
+    </div>
+
+
+    <div class="about">
+        <h1>About</h1>
+        <div id="tabs">
+            <ul>
+                <li><a href="#tab-1">Our Mission</a></li>
+                <li><a href="#tab-2">Our Vision</a></li>
+                <li><a href="#tab-3">Our Team</a></li>
+                <li><a href="#tab-4">Contact Us</a></li>
+            </ul>
+            <div id="tab-1">
+                <h2>Our Mission</h2>
+                <p>Our mission as a company is to meet the needs of our customers by providing them with high-quality
+                    products and services.</p>
+                <div style="padding-left: 400px;" class="progress-bars-container">
+                    <div class="circle-progress-bar" data-value="0.98" data-size="200" data-text="%98.2"></div>
+
+                </div>
+                <br>
+                <div style="padding-left: 420px;">Customer happiness</div>
+                <br>
+                <div style="padding-left: 400px;" class="progress-bars-container">
+                    <div class="circle-progress-bar" data-value="0.95" data-size="200" data-text="%95.5"></div>
+
+                </div>
+                <div style="padding-left: 420px;">Employee Satisfaction</div>
+                <br>
+                <div style="padding-left: 400px;" class="progress-bars-container">
+                    <div class="circle-progress-bar" data-value="0.02" data-size="200" data-text="%2"></div>
+
+                </div>
+                <br>
+                <div style="padding-left: 420px;">Negative Feedback</div>
+
+
+            </div>
+            <div id="tab-2">
+                <h2>Our Vision</h2>
+                <p>Our vision is to become a leader in the industry and consistently offer innovative solutions.</p>
+                <p>We strive to be at the forefront of the industry, providing cutting-edge solutions.</p>
+
+                <button id="showMoreBtn">Show More</button>
+                <div id="extraContent" style="display: none;">
+                    <p>We aim to add value to our customers through innovative projects.</p>
+                    <p>We stay updated with constantly evolving technologies and offer the latest industry trends to our
+                        customers.</p>
+
+                </div>
+            </div>
+            <div id="tab-3">
+                <h2>Our Team</h2>
+                <ul class="userListUl" id="team-list"></ul>
+                <h2>Big Team Gathering Party</h2>
+                <div id="countdown"></div>
+
+
+            </div>
+            <div id="tab-4">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input class="contactUsInput" type="text" id="name" name="name" required>
+                    <br>
+                    <label for="email">Email:</label>
+                    <br>
+                    <input class="contactUsInput" type="email" id="email" name="email" required>
+                    <br>
+                    <label for="message">Message:</label>
+                    <br>
+                    <textarea class="contactUsInput" id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+
+
+        <div align="right">
+            <i>You can send an email for detailed information.<br>
+                <a href="mailto:19050111060@ybu.edu.tr">Send Email</a></i>
+        </div>
+
+
+
+        <script>
+
+
+            $(function () {
+
+                $(document).ready(function () {
+                    var userList = [
+                        { name: "Ahmet Yılmaz - CEO", image: "https://randomuser.me/api/portraits/men/84.jpg" },
+                        { name: "Mehmet Demir - CFO", image: "https://randomuser.me/api/portraits/men/88.jpg" },
+                        { name: "Ayşe Kaya - CTO", image: "https://randomuser.me/api/portraits/women/92.jpg" },
+                        { name: "Ali Can - Manager", image: "https://randomuser.me/api/portraits/men/90.jpg" },
+                        { name: "Ayşe Demir - Engineer", image: "https://randomuser.me/api/portraits/women/87.jpg" },
+                        { name: "John Smith - Sales Manager", image: "https://randomuser.me/api/portraits/men/81.jpg" },
+                        { name: "Emily Johnson - Marketing Specialist", image: "https://randomuser.me/api/portraits/women/83.jpg" },
+                        { name: "David Brown - Property Manager", image: "https://randomuser.me/api/portraits/men/82.jpg" },
+                        { name: "Emma Davis - Accountant", image: "https://randomuser.me/api/portraits/women/85.jpg" },
+                        { name: "Michael Wilson - Legal Counsel", image: "https://randomuser.me/api/portraits/men/89.jpg" },
+                        { name: "Sarah Thompson - HR Manager", image: "https://randomuser.me/api/portraits/women/88.jpg" },
+                        { name: "Robert Martinez - Architect", image: "https://randomuser.me/api/portraits/men/86.jpg" },
+                        { name: "Jessica Anderson - Interior Designer", image: "https://randomuser.me/api/portraits/women/81.jpg" },
+                        { name: "Daniel Lee - Construction Supervisor", image: "https://randomuser.me/api/portraits/men/85.jpg" },
+                        { name: "Sophia Moore - Customer Service Representative", image: "https://randomuser.me/api/portraits/women/84.jpg" },
+                        { name: "Matthew Clark - IT Support Specialist", image: "https://randomuser.me/api/portraits/men/83.jpg" },
+                        { name: "Olivia Rodriguez - Leasing Agent", image: "https://randomuser.me/api/portraits/women/82.jpg" },
+                        { name: "James Taylor - Property Appraiser", image: "https://randomuser.me/api/portraits/men/87.jpg" },
+                    ];
+
+
+
+                    $.each(userList, function (index, user) {
+                        var listItem = $('<li class ="userListLi"></li>');
+                        var image = $('<img class = "userListImg">').attr('src', user.image);
+                        var name = $('<p class= "userListP"></p>').text(user.name);
+                        listItem.append(image, name);
+                        $('#team-list').append(listItem);
+                    });
+                });
+
+                <!-- jQuery-UI widget -->
+                $("#tabs").tabs();
+
+                $(function () {
+
+                    $("#contact-form").validate();
+
+                    // Handle form submission
+                    $("#contact-form").submit(function (event) {
+                        event.preventDefault();
+
+                        if ($(this).valid()) {
+
+                            var formData = $(this).serialize();
+
+                            $(this)[0].reset();
+                        }
+                    });
+                    $(".circle-progress-bar").each(function () {
+                        var value = $(this).data("value");
+                        var text = $(this).data("text");
+
+                        $(this).circleProgress({
+                            value: value,
+                            size: $(this).data("size"),
+                            fill: { color: "#1e90ff" },
+                            lineCap: "round"
+                        });
+
+                        $(this).attr("data-text", text);
+                    });
+                });
+
+                $("#countdown").countdown("2023/06/06", function (event) {
+                    $(this).text(event.strftime("%D days %H:%M:%S"));
+                });
+
+                $("#showMoreBtn").click(function () {
+                    $("#extraContent").toggle();
+                });
+
+
+                $("#tabs").validate();
+
+
+            });
+
+        </script>
+</body>
+
+</html>

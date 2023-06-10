@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin-left: 400px;
+        }
+    </style>
+    <title>Alperen Gayrimenkul</title>
+    <link rel="stylesheet" href="tasarim.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Tetikleyiciyi seçin
+            var getDataButton = document.getElementById("getDataButton");
+
+            // Tetikleyiciye bir tıklama olayı ekleyin
+            getDataButton.addEventListener("click", function () {
+                // Yeni bir XMLHttpRequest nesnesi oluşturun
+                var xhr = new XMLHttpRequest();
+
+                // GET isteği gönderin
+                xhr.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+
+                // İsteğin tamamlanması durumunda yapılacak işlemler
+                xhr.onload = function () {
+                    // İstek başarılı olduysa
+                    if (xhr.status === 200) {
+                        // Sunucudan gelen verileri alın
+                        var response = JSON.parse(xhr.responseText);
+
+                        // Verileri kullanarak istediğiniz işlemleri gerçekleştirin
+                        console.log(response); // Örneğin, verileri konsola yazdırabilirsiniz
+                        console.log(response[0])
+                        console.log(response[0].name)
+                        var table = '<table>';
+                            table += '<tr><th>Name</th><th>Address</th><th>Phone</th><th>Website</th></tr>';
+                            
+                            for (var i = 0; i < response.length; i++) {
+                                table += '<tr>';
+                                table += '<td>' + response[i].name + '</td>'+ '\t\t';
+                                table += '<td>' + response[i].address.city + '</td>';
+                                table += '<td>' + response[i].phone+ '</td>';
+                                table += '<td>' + response[i].website+ '</td>';
+                                table += '</tr>';
+                            }
+                            
+                            table += '</table>';
+                            
+                            $("main").append(table);
+                            
+
+                        // Butonu devre dışı bırak
+                        getDataButton.disabled = true;
+                    }
+                };
+
+                // İsteği gönderin
+                xhr.send();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <p class="baslik">ALPEREN GAYRIMENKUL</p>
+        <div class="search">
+            <input type="text" placeholder=" Search.." name="search">
+        </div>
+    </div>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+    </label>
+    <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
+            <li><span>WELCOME</span> TO ALPEREN GAYRIMENKUL</li>
+            <li>
+                <div class="row">
+                    <a href="index.html">
+                        <div class="column">
+                            <i class="material-icons">home</i>
+                        </div>
+                        <div class="column">
+                            <p>HOME PAGE</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="row">
+                    <a href="detail_page.html">
+                        <div class="column">
+                            <i class="material-icons">directions_car</i>
+                        </div>
+                        <div class="column">
+                            <p>CAR LAND HOUSE</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="row">
+                    <a href="about.html">
+                        <div class="column">
+                            <i class="material-icons">
+                                <div class="icons">cloud</div>
+                            </i>
+                        </div>
+                        <div class="column">
+                            <p>About Us</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="row">
+                    <a href="login.html">
+                        <div class="column">
+                            <i class="material-icons">
+                                <div class="icons">person</div>
+                            </i>
+                        </div>
+                        <div class="column">
+                            <p>Login</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div style="margin-left: 400px;">
+        <img src="assets/homepage.jpg" width="70%" margin-left="500px">
+        <div>
+            <p>It's time to get your dream house, car, land!</p>
+        </div>
+        <br>
+        <button id="getDataButton">Show the employeer </button>
+        <br>
+        <main></main>
+       
+    </div>
+    <i class="fas fa-bars" id="btn_open"></i>
+</body>
+</html>

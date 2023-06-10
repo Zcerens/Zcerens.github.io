@@ -1,0 +1,23 @@
+{"houses":[
+	{
+		"name": "Home I",
+		"title": "10.000km ",
+		"price": "$170.000",
+		"image": "assets/home1.jpg",
+		"text": "Masaratti hakkında bilgiler"		
+	},
+    {
+		"name": "Home II",
+		"title": "10.000km ",
+		"price": "$250.000",
+		"image": "assets/home2.jpg",
+		"text": "Masaratti hakkında bilgiler"		
+	},
+    {
+		"name": "Home III",
+		"title": "10.000km ",
+		"price": "$225.000",
+		"image": "assets/home3.jpg",
+		"text": "Masaratti hakkında bilgiler"		
+	}
+]}

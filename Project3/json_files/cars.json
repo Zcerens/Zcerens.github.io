@@ -1,0 +1,30 @@
+{"cars":[
+	{
+		"name": "Masarati",
+		"title": "10.000km ",
+		"price": "$50.000",
+		"image": "assets/masarati.jpg",
+		"text": "Masaratti hakkında bilgiler"		
+	},
+    {
+		"name": "Mercedes",
+		"title": "10.000km ",
+		"price": "$50.000",
+		"image": "assets/mercedes.jpg",
+		"text": "Masaratti hakkında bilgiler"		
+	},
+    {
+		"name": "Mustang",
+		"title": "10.000km ",
+		"price": "$40.000",
+		"image": "assets/mustang.jpg",
+		"text": "Masaratti hakkında bilgiler"		
+	},
+	{
+		"name": "Dodge",
+		"title": "10.000km ",
+		"price": "$60.000",
+		"image": "assets/dodge.jpg",
+		"text": "Masaratti hakkında bilgiler"		
+	}
+]}

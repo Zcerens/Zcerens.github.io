@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Car - Home - Land</title>
+    <link rel="stylesheet" href="tasarim.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //var fileName = "cars.json";
+            // main öğesindeki içeriği temizle
+	  $("main").empty();
+              // JSON dosyasını yükle
+              $.getJSON("json_files/cars.json" , function(data) {
+               // console.log("json_files\\" + fileName);
+                console.log(data);
+          
+                 //HTML içeriği 
+                 $.each(data.cars, function(index, cars) {
+                console.log(cars)
+                   var html = '<h4>' + cars.name + '</h4>' +
+                 	'<img class = "animasyon" src="' + cars.image + '" alt="Avatar" style="width:100%">' 
+                   
+                   
+                    var car = '  <div class="column">'+
+                       ' <div class="card">'+
+                        '<img class = "animasyon" src=" ' +cars.image+ '" alt="Avatar" style="width:100%">'+
+                        '<div class="container">'+
+                            ' <h4><b> '+ cars.name +'</b></h4>'+
+                            '  <p>' + cars.price +'</p>'+
+                            ' </div>'+
+                            '</div>'+
+                            '</div>'
+                            $("main").append(car);
+
+                         
+          
+               
+                 });
+
+                  
+              });
+              $.getJSON("json_files/houses.json", function(data) {
+                //console.log("json_files\\" + fileName);
+                console.log(data);
+          
+              
+                   //HTML içeriği 
+                   $.each(data.houses, function(index, houses) {
+                    console.log(houses)
+                       var html = '<h4>' + houses.name + '</h4>' +
+                         '<img class = "animasyon" src="' + houses.image + '" alt="Avatar" style="width:100%">' 
+                       
+                       
+                        var house = '  <div class="column">'+
+                           ' <div class="card">'+
+                            '<img class = "animasyon" src=" ' +houses.image+ '" alt="Avatar" style="width:100%">'+
+                            '<div class="container">'+
+                                ' <h4><b> '+ houses.name +'</b></h4>'+
+                                '  <p>' + houses.price +'</p>'+
+                                ' </div>'+
+                                '</div>'+
+                                '</div>'
+                                $("main").append(house);
+    
+                             
+              
+                      //$("main").html(html1);
+                     });
+              });
+            
+          });
+    </script>
+</head>
+
+<body >
+    <div class="header">
+        <p class="baslik">ALPEREN GAYRIMENKUL</p>
+        <div class="search">
+            <input type="text"
+                placeholder=" Search.."
+                name="search">
+    </div>
+    </div>
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+
+    </label>
+    <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
+            <li> <span>WELCOME</span> TO ALPEREN GAYRIMENKUL</li>
+            <li>
+              
+
+
+
+                    <div class="row">  <a href="index.html">
+                        <div class="column">
+                            <i class="material-icons">home</i>
+                        </div>
+                        <div class="column">
+                            <p>HOME PAGE</p>
+                        </div>
+                    </div>
+                </a>
+
+
+            </li>
+
+            <li>
+          
+                <div class="row">      <a href="detail_page.html">
+                    <div class="column">
+                        <i class="material-icons">directions_car</i>
+                    </div>
+                    <div class="column">
+                        <p>CAR LAND HOUSE</p>
+                    </div>
+                </div>
+            </li>
+
+
+
+
+            <li>
+                
+                    <!-- link değişecek -->
+                    <div class="row"><a href="about.html">
+                        <div class="column">
+                            <i class="material-icons">
+                                <div class="icons">cloud</div>
+                            </i>
+                        </div>
+                        <div class="column">
+                            <p>About Us</p>
+
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+              
+                <!-- link değişecek -->
+                <div class="row">  <a href="login.html">
+                    <div class="column">
+                        <i class="material-icons">
+                            <div class="icons">person</div>
+                        </i>
+                    </div>
+                    <div class="column">
+                        <p>Login</p>
+
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        </ul>
+    </div>
+    <!-- arabalar -->
+    
+    <!-- <div class="row">
+       
+    </div> -->
+<!-- evler -->
+<main >
+
+</main>
+    <!-- <div class="row">
+        <div class="column">
+            <div class="card">
+                <img class = "animasyon" src="assets/home1.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Home I</b></h4>
+                    <p>$65.000</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img class = "animasyon" src="assets/home2.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Home II</b></h4>
+                    <p>$55.000</p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img class="animasyon" src="assets/home3.jpg" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>Home III</b></h4>
+                    <p>$68.000</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</body>
+
+</html>

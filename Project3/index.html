@@ -11,26 +11,25 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Tetikleyiciyi seçin
+        
             var getDataButton = document.getElementById("getDataButton");
 
             // Tetikleyiciye bir tıklama olayı ekleyin
             getDataButton.addEventListener("click", function () {
-                // Yeni bir XMLHttpRequest nesnesi oluşturun
+               
                 var xhr = new XMLHttpRequest();
 
-                // GET isteği gönderin
+               
                 xhr.open("GET", "https://jsonplaceholder.typicode.com/users", true);
 
-                // İsteğin tamamlanması durumunda yapılacak işlemler
+                
                 xhr.onload = function () {
-                    // İstek başarılı olduysa
+                    // sucess
                     if (xhr.status === 200) {
-                        // Sunucudan gelen verileri alın
+                        
                         var response = JSON.parse(xhr.responseText);
 
-                        // Verileri kullanarak istediğiniz işlemleri gerçekleştirin
-                        console.log(response); // Örneğin, verileri konsola yazdırabilirsiniz
+                        console.log(response);
                         console.log(response[0])
                         console.log(response[0].name)
                         var table = '<table>';
@@ -50,12 +49,12 @@
                             $("main").append(table);
                             
 
-                        // Butonu devre dışı bırak
+                       
                         getDataButton.disabled = true;
                     }
                 };
 
-                // İsteği gönderin
+              
                 xhr.send();
             });
         });

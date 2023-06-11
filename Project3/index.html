@@ -11,10 +11,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-        
+    
             var getDataButton = document.getElementById("getDataButton");
-
-            // Tetikleyiciye bir tıklama olayı ekleyin
             getDataButton.addEventListener("click", function () {
                
                 var xhr = new XMLHttpRequest();
@@ -53,8 +51,6 @@
                         getDataButton.disabled = true;
                     }
                 };
-
-              
                 xhr.send();
             });
         });
